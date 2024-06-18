@@ -1,0 +1,102 @@
+[{
+    "id": "m1-left",
+    "height": "0px",
+    "width": "0px",
+    "margin": "0px 0px 0px 0px",
+    "name": "m1-left",
+    "layer": "top",
+        "output": "DP-1",
+    "position": "left",
+    "spacing":"4",
+    "modules-right": [ "clock", "custom/notification"],
+    "modules-center": [ "sway/scratchpad" ],
+    "modules-left": ["hyprland/spaces"],
+    
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "alphabetical_sort": true
+    },
+    "clock": {
+        "format": "{:%A\n%D\n%b %H:%M}",
+        "tooltip": true,
+        "on-click": "swaync-client -t -sw"
+    }
+},
+
+{
+    "id": "m2-right",
+    "height": "0px",
+    "width": "0px",
+    "margin": "0px 0px 0px 0px",
+    "name": "m2-rightt",
+    "layer": "top",
+        "output": "DP-2",
+    "position": "right",
+    "spacing":"4",
+    "modules-right": [ "sway/mode", "tray", "backlight", "battery", "idle_inhibitor", "clock", "custom/notification"],
+    "modules-center": [ "sway/scratchpad" ],
+    "modules-left": ["hyprland/spaces"],
+    
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "alphabetical_sort": true
+    },
+    "clock": {
+        "format": "{:%A\n%D\n%b %H:%M}",
+        "tooltip": true,
+        "on-click": "swaync-client -t -sw"
+    }
+}
+]
+
+[{
+    
+    "height": "10px",
+    "width": "10px",
+    "margin": "0px 0px 0px 0px",
+    "name": "m1-right",
+    "layer": "top",
+        "output": "DP-1",
+    "position": "right",
+    "spacing":"4",
+    "modules-right": [],
+    "modules-center": [  ],
+    "modules-left": [],
+    
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "alphabetical_sort": true
+    },
+    "clock": {
+        "format": "{:%A\n%D\n%b %H:%M}",
+        "tooltip": true,
+        "on-click": "swaync-client -t -sw"
+    }
+},
+
+{
+    "id": "m2-left",
+    "height": "10px",
+    "width": "10px",
+    "margin": "0px 0px 0px 0px",
+    "name": "id": "m1-right","m2-left",
+    "layer": "top",
+        "output": "DP-2",
+    "position": "left",
+    "spacing":"4",
+    "modules-right": [ ],
+    "modules-center": [ ],
+    "modules-left": [],
+    
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "alphabetical_sort": true
+    },
+    "clock": {
+        "format": "{:%A\n%D\n%b %H:%M}",
+        "tooltip": true,
+        "on-click": "swaync-client -t -sw"
+    }
+}
+]
+

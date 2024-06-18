@@ -1,0 +1,94 @@
+},
+    "battery": {
+        "format": "{icon}",
+        "format-alt": "{time}  {icon}",
+        "tooltip-format": "{time}",
+        "format-alt-click": "click-right",
+        "format-icons": ["󰁺", "󰁼", "󰁿", "󰁹"],
+        "format-charging": "󰚥",
+        "interval": 30,
+        "on-click": "gnome-control-center power",
+        "states": {
+            "warning": 50,
+            "critical": 20
+        }
+    },
+    "network": {
+        "format": "{icon}",
+        "format-icons": {
+            "wifi": [""],
+            "ethernet": ["󰈀"],
+            "disconnected": ["󰖪"]
+        },   
+        "format-alt-click": "click-right",
+        "format-wifi": "",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪", 
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-wifi": "    {essid} \n{ipaddr} {signalStrength}%",
+        "tooltip-format-ethernet": "{ifname} {ipaddr} 󰈀",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "gnome-control-center network",
+        "tooltip": true
+    },
+    "backlight": {
+           "device": "intel_backlight",
+           "format": "{icon}",
+           "format-icons": ["󰃞", "󰃝", "󰃠"],
+           "on-scroll-up": "exec brightnessctl set 5%+",
+           "on-scroll-down": "brightnessctl set 5%-",
+           "states": {
+               "low": 0,
+               "mid": 50,
+               "high": 75
+           },
+           "smooth-scrolling-threshold": 1.0
+       },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰈈",
+            "deactivated": "󰛐"
+        }
+    },
+    "custom/notification": {
+       "tooltip": false,
+       "format": "{icon}",
+       "format-icons": {
+         "notification": "<span foreground='red'><sup></sup></span>",
+         "none": " ",
+         "dnd-notification": "<span foreground='red'><sup></sup></span>",
+         "dnd-none": " "
+       },
+       "return-type": "json",
+       "exec-if": "which swaync-client",
+       "exec": "swaync-client -swb",
+       "on-click": "swaync-client -t -sw",
+       "on-click-right": "swaync-client --close-all",
+       "escape": true
+     },
+    "tray": {
+      "icon-size": 12,
+      "spacing": 10
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "sort-by-app-id": true,
+        "icon-size": 13,
+        "icon-theme": "Numix-Circle",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-right": "close",
+        "markup": true,
+        "ignore-list": [
+           "kitty"
+        ]
+    },
+    "sway/scratchpad": {
+            "format": "{icon}",
+            "show-empty": false,
+            "format-icons": ["", ""],
+            "icon-size": 7,
+            "tooltip": true,
+            "tooltip-format": "{app}: {title}"
+    }
